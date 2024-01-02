@@ -1,0 +1,3 @@
+type OrderBy = {
+  orderBy: string
+}
