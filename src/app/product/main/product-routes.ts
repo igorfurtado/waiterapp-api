@@ -1,18 +1,10 @@
 import { Router } from 'express'
+import ProductController from '../controllers/product-controller'
 
 const router = Router()
 
-// List products
-router.get('/products', (req, res) => {
-  res.send('OK')
-})
-
-// Create product
-router.post('/products', (req, res) => {
-  res.send('OK')
-})
-
-// Get products by category
+router.get('/products', ProductController.index)
+router.post('/products', ProductController.store)
 router.get('/categories/:categoryId/products', (req, res) => {
   res.send('OK')
 })

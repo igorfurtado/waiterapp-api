@@ -1,4 +1,4 @@
-import { Category } from 'src/app/models/Category'
+import { Category } from '../../models/Category'
 
 class CategoryRepository {
   async findAll() {
