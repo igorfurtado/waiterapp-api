@@ -11,4 +11,6 @@ mongoose
       console.log(`🚀 Server is running on http://localhost:${port}`)
     })
   })
-  .catch(() => console.log('Erro ao conectar no MongoDb'))
+  .catch(() =>
+    console.log('❌ An error occurred when trying to connect to MongoDb')
+  )
