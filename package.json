@@ -6,7 +6,8 @@
   "author": "Igor Targino",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "nodemon src/index.ts",
+    "dev": "nodemon src/index.ts",
     "build": "tsc"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
+    "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
