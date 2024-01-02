@@ -1,0 +1,16 @@
+{
+  "name": "waiterapp",
+  "version": "1.0.0",
+  "description": "Application for managing orders in a restaurant",
+  "main": "index.js",
+  "author": "Igor Targino",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
