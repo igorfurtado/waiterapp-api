@@ -9,8 +9,8 @@ class ProductController {
   }
 
   async store(request: Request, response: Response) {
-    const { name, category, description, imagePath, ingredients, price } =
-      request.body
+    const { name, category, description, ingredients, price } = request.body
+    const imagePath = request.file?.filename
 
     if (!name) {
       return response.status(400).json({ error: 'O nome é obrigatório.' })
@@ -21,8 +21,8 @@ class ProductController {
       category,
       description,
       imagePath,
-      ingredients,
-      price
+      ingredients: JSON.parse(ingredients),
+      price: Number(price)
     })
 
     response.status(201).json(product)

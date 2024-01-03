@@ -17,7 +17,7 @@ class ProductRepository {
   }: {
     name: string
     description: string
-    imagePath: string
+    imagePath: string | undefined
     price: number
     ingredients: {
       name: string
