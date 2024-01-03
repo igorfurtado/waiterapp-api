@@ -6,7 +6,7 @@
   "author": "Igor Targino",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "node dist",
     "dev": "nodemon src/index.ts",
     "build": "tsc"
   },
