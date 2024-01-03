@@ -1,5 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import path from 'node:path'
 import categoryRoutes from './app/category/main/category-routes'
 import orderRoutes from './app/order/main/order-routes'
 import productRoutes from './app/product/main/product-routes'
@@ -11,6 +12,10 @@ mongoose
     const port = 3001
     const app = express()
 
+    app.use(
+      '/uploads',
+      express.static(path.resolve(__dirname, '..', 'uploads'))
+    )
     app.use(express.json())
 
     app.use(categoryRoutes)
