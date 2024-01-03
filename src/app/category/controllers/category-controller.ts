@@ -11,14 +11,6 @@ class CategoryController {
   async store(request: Request, response: Response) {
     const { name, icon } = request.body
 
-    if (!name) {
-      return response.status(400).json({ error: 'O nome é obrigatório.' })
-    }
-
-    if (!icon) {
-      return response.status(400).json({ error: 'O ícone é obrigatório.' })
-    }
-
     const category = await CategoryRepository.create({ name, icon })
 
     response.status(201).json(category)

@@ -2,9 +2,9 @@ import { Product } from '../../models/Product'
 
 class ProductRepository {
   async findAll() {
-    const categories = await Product.find()
+    const products = await Product.find()
 
-    return categories
+    return products
   }
 
   async create({
@@ -25,7 +25,7 @@ class ProductRepository {
     }[]
     category: string
   }) {
-    const createCategory = await Product.create({
+    const createdProduct = await Product.create({
       name,
       price,
       category,
@@ -34,7 +34,7 @@ class ProductRepository {
       ingredients
     })
 
-    return createCategory
+    return createdProduct
   }
 }
 
