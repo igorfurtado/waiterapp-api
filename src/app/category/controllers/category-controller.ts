@@ -8,6 +8,13 @@ class CategoryController {
     response.status(200).json(categories)
   }
 
+  async indexProducts(request: Request, response: Response) {
+    const { categoryId } = request.params
+    const products = await CategoryRepository.findProductsByCategory(categoryId)
+
+    response.status(200).json(products)
+  }
+
   async store(request: Request, response: Response) {
     const { name, icon } = request.body
 

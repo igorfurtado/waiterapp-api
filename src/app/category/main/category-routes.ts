@@ -6,5 +6,6 @@ const router = Router()
 
 router.get('/categories', CategoryController.index)
 router.post('/categories', createCategoryValidator, CategoryController.store)
+router.get('/categories/:categoryId/products', CategoryController.indexProducts)
 
 export default router

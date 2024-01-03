@@ -18,8 +18,5 @@ const upload = multer({
 
 router.get('/products', ProductController.index)
 router.post('/products', upload.single('image'), ProductController.store)
-router.get('/categories/:categoryId/products', (req, res) => {
-  res.send('OK')
-})
 
 export default router
